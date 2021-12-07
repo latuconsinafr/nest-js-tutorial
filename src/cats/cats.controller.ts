@@ -6,10 +6,10 @@ import {
   Param,
   ParseUUIDPipe,
   Post,
-  UseGuards,
+  UseInterceptors,
 } from '@nestjs/common';
+import { LoggingInterceptor } from 'src/logging.interceptor';
 import { Roles } from 'src/roles-decorator';
-import { RolesGuard } from 'src/roles.guard';
 import { CatsService } from './cats.service';
 import { CreateCatDto } from './dto/create-cat.dto';
 import { Cat } from './interfaces/cat.interface';
