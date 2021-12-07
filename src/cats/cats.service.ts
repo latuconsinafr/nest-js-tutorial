@@ -9,6 +9,10 @@ export class CatsService {
     return this.cats;
   }
 
+  findById(id: number): Cat {
+    return this.cats[id];
+  }
+
   create(cat: Cat) {
     this.cats.push(cat);
   }
